@@ -1,25 +1,12 @@
-function getSubscriptionPrice(type) {
-  let price;
+function checkPassword(password) {
+  const ADMIN_PASSWORD = 'jqueryismyjam';
+  let message;
   // Пиши код ниже этой строки
-
- switch (type) { // Дополни эту строку
-    case 'starter': // Дополни эту строку
-      price = 0; // Дополни эту строку
-      break;
-
-    case 'professional': // Дополни эту строку
-      price = 20; // Дополни эту строку
-      break;
-
-    case 'organization': // Дополни эту строку
-      price = 50; // Дополни эту строку
-      break;
-  }
-
+	message = password === ADMIN_PASSWORD ? 'Доступ разрешен' : 'Доступ запрещён, неверный пароль!';
   // Пиши код выше этой строки
-  return price;
+  return message;
 }
 
-console.log(getSubscriptionPrice('professional'));
-console.log(getSubscriptionPrice('organization'));
-console.log(getSubscriptionPrice('starter'));
+console.log(checkPassword('jqueryismyjam'));
+console.log(checkPassword('angul4r1sl1f3'));
+console.log(checkPassword('r3actsux'));
